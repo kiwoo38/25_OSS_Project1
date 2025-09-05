@@ -32,9 +32,6 @@
     .hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center; padding: 60px 0 30px; }
     .hero h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.1; margin: 0 0 14px; }
     .hero p { color: var(--muted); font-size: clamp(14px, 2.5vw, 18px); }
-    .hero-cta { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 16px; border-radius: 999px; border: 1px solid #1f2937; background: #0f172a; color: var(--text); font-weight: 700; }
-    .btn.primary { background: linear-gradient(90deg,var(--brand),var(--brand-2)); color: #0b0f17; border: 0; }
 
     .avatar-card { background: radial-gradient(1200px 400px at 10% -20%, rgba(96,165,250,.15), transparent), radial-gradient(1000px 400px at 110% 120%, rgba(52,211,153,.12), transparent); border: 1px solid #1f2937; border-radius: var(--radius); padding: 24px; display: grid; gap: 16px; }
     .avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid #1f2937; }
@@ -84,8 +81,6 @@
         <div class="nav-links">
           <a href="#about">소개</a>
           <a href="#skills">기술스택</a>
-          <a href="#projects">프로젝트</a>
-          <a href="#contact">연락처</a>
         </div>
       </nav>
     </div>
@@ -100,10 +95,6 @@
           알고리즘과 자료구조에 기반한 성능 최적화, 신뢰할 수 있는 시스템 구현,
           그리고 실제 서비스에 적용 가능한 AI 모델 개발에 관심이 있습니다.
         </p>
-        <div class="hero-cta">
-          <a class="btn primary" href="#projects">대표 프로젝트 보기</a>
-          <a class="btn" href="#contact">협업 문의</a>
-        </div>
       </div>
       <aside class="avatar-card">
         <div style="display:flex; gap:14px; align-items:center;">
@@ -134,16 +125,17 @@
           </p>
           <ul class="clean">
             <li>관심사: 시스템 프로그래밍, 모델 서빙, 추론 최적화, 데이터 파이프라인</li>
-            <li>핵심 역량: 문제 분해, 디버깅, 알고리즘/자료구조 적용, 벤치마킹</li>
-            <li>가치관: 단순함, 가독성, 재현 가능한 실험</li>
+            <li>핵심 역량: 문제 분해, 디버깅, 알고리즘/자료구조 적용</li>
+            <li>가치관: 가독성, 재현 가능한 실험</li>
           </ul>
         </article>
         <aside class="card" style="grid-column: span 5;">
-          <h3>빠른 링크</h3>
+          <h3>과제 nostyle, style1, style2, example 링크가기</h3>
           <ol class="clean">
-            <li><a href="https://github.com/kiwoo38" target="_blank" rel="noopener">GitHub</a> – 과제/개인 프로젝트 저장소</li>
-            <li><a href="#projects">대표 프로젝트</a> – 캡스톤/수업/개인작</li>
-            <li><a href="#contact">연락처</a> – 협업 및 문의</li>
+            <li><a href="nostyle.html" target="_blank" rel="noopener">nostyle.html</a></li>
+            <li><a href="#projects">style1.html</a></li>
+            <li><a href="#contact">style2.html</a></li>
+            <li><a href="#contact">example.html</a></li>
           </ol>
         </aside>
       </div>
@@ -180,49 +172,6 @@
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-      <h2 class="section-title">대표 프로젝트</h2>
-      <div class="grid">
-        <article class="card project" style="grid-column: span 12;">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop" alt="C++ 자료구조 시각화(예시)"/>
-          <div>
-            <h3>C++ 자료구조 시뮬레이터</h3>
-            <p class="muted">벡터 힙/트리/그래프 기본 연산을 시각화 및 성능 비교. 템플릿 기반으로 다양한 타입 지원.</p>
-            <ul class="clean">
-              <li>역할: 설계 · 구현 · 문서화</li>
-              <li>기술: C++17, STL, GoogleTest</li>
-              <li>링크: <a href="https://github.com/kiwoo38" target="_blank" rel="noopener">GitHub 저장소</a></li>
-            </ul>
-          </div>
-        </article>
-        <article class="card project" style="grid-column: span 12;">
-          <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=800&auto=format&fit=crop" alt="Java CLI 분석기(예시)"/>
-          <div>
-            <h3>Java 데이터 분석 CLI</h3>
-            <p class="muted">CSV 파싱과 통계치 출력, 리포트 생성 자동화. 예외/테스트/CLI 옵션 처리.</p>
-            <ul class="clean">
-              <li>역할: 핵심 로직 개발, 유효성 검사</li>
-              <li>기술: Java, Apache Commons CSV/CLI</li>
-              <li>링크: <a href="https://github.com/kiwoo38" target="_blank" rel="noopener">GitHub 저장소</a></li>
-            </ul>
-          </div>
-        </article>
-        <article class="card project" style="grid-column: span 12;">
-          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&auto=format&fit=crop" alt="AI 모델 서빙(예시)"/>
-          <div>
-            <h3>간단한 AI 모델 서빙</h3>
-            <p class="muted">모델 추론 API 프로토타입과 로깅/지표 수집 파이프라인 시범 구현.</p>
-            <ul class="clean">
-              <li>역할: 백엔드/서빙 구조 설계</li>
-              <li>기술: Python, FastAPI, Docker(개념), 로깅</li>
-              <li>링크: <a href="https://github.com/kiwoo38" target="_blank" rel="noopener">GitHub 저장소</a></li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
     <!-- Extra: 목록/링크/이미지 예시 블록 -->
     <section>
       <h2 class="section-title">샘플 구성 요소</h2>
@@ -250,18 +199,6 @@
             <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1000&auto=format&fit=crop" alt="코딩 예시 이미지" style="max-width:100%; border-radius:12px; border:1px solid #1f2937;"/>
           </p>
           <p>더 많은 정보는 <a href="https://handong.edu" target="_blank" rel="noopener">Handong University</a> 또는 <a href="https://github.com/kiwoo38" target="_blank" rel="noopener">GitHub</a>를 참고하세요.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2 class="section-title">연락처</h2>
-      <div class="grid">
-        <div class="card" style="grid-column: span 12; display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
-          <div class="chip">Email: <a href="mailto:kiwoo@example.com">kiwoo@example.com</a></div>
-          <div class="chip">GitHub: <a href="https://github.com/kiwoo38" target="_blank" rel="noopener">@kiwoo38</a></div>
-          <div class="chip">LinkedIn: <a href="#" target="_blank" rel="noopener">linkedin.com/in/kiwoo</a></div>
         </div>
       </div>
     </section>

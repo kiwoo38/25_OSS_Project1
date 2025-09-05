@@ -1,6 +1,4 @@
-.container{
+div{
     display:block;
-}
-.wrapper{
-    display:block;
+    unicode-bidi: isolate;
 }
