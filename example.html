@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결재 사이트</title>
+<style>
+    html, body{
+        height:100%;
+    }
+    body{
+        margin:0;
+        background-color: #d5d4d422;;
+    }
+    .container{
+        max-width:1000px;
+        width:min(1000px,92%);
+        margin: 0 auto;
+        padding: 8px 8px;
+        overflow: hidden;
+    }
+    :root{
+        --row:clamp(28px,5vw,40px);
+    }
+    .top-box img{
+        float:left;
+        height: var(--row);
+        width: auto;
+        display:block;
+    }
+    .title{
+        float:left;
+        margin-left: 20px;
+        line-height: var(--row);
+    }
+    .title h4{
+        margin:0;
+        font-size: 24px
+    }
+    .nav{
+        float:right; 
+        line-height: var(--row);
+        white-space:nowrap;
+        font-size: 20px;
+    }
+    .nav a{
+        text-decoration: none;
+        color:black;
+        margin-left: 16px;
+    }
+    .nav a:first-child{margin-left:0}
+
+    /* ===== 좁은 화면에서는 세로로 쌓기 ===== */
+  @media (max-width: 700px){
+    .top-box img{
+      float:none;              /* float 해제 */
+      display:block;
+      margin:0 auto;           /* 로고 중앙 */
+    }
+    .title{
+      float:none;
+      margin:8px 0 0;
+      line-height:1.2;
+      text-align:center;
+    }
+    .nav{
+      float:none;
+      margin-top:8px;
+      line-height:1.2;
+      text-align:center;
+      white-space:normal;      /* 줄바꿈 허용 */
+    }
+    .nav a{
+      display:inline-block;
+      margin: 6px 10px 0;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <div class="top-box">
+        <a href="index.html">
+            <img src="B.png" alt="로고">
+        </a>
+     </div> 
+    <div class="title">
+        <h4> Pricing example</h4>
+    </div>
+        <div class="nav">
+            <a href="#">Features</a>
+            <a href="#">Enterprise</a>
+            <a href="#">Support</a>
+            <a href="#">Pricing</a>
+    </div>
+        
+    </div>
+    
+   
+ 
+</div>
+    
+</body>
+</html>
