@@ -68,6 +68,142 @@
         max-width:60ch
 
     }
+    .row{
+        display: flex;
+        gap:18px;
+        margin:28px 0;
+    }
+    .col{
+        float:none;
+        flex:1 1 0;
+        padding:0 9px;
+        box-sizing: border-box;
+        display:flex;
+    }
+    .card{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        background:#ffffff;
+        border:1px solid #e5e7eb;
+        border-radius:10px;
+    }
+    .card-header{
+        padding:14px 16px;
+        background:#f8fafc;
+        border-bottom:1px solid #e5e7eb;
+        text-align: center;
+    }
+    .card-header h4{
+        margin:0;
+        font-size:24px;
+    }
+    .card-body{
+        flex:1;
+        display:flex;
+        flex-direction: column;
+        text-align:center;
+    }
+    .prince{
+        display:flex;
+        justify-content: center;
+        align-items:baseline;
+        gap:6px;
+        margin:8px 0 14px;
+    }
+    .price .amount{
+        font-size: 48px;
+        font-weight: 800;
+    }
+    .price .unit{
+        font-size: 20px;
+        color:#6b7280;
+    }
+    .features{
+        list-style:none;
+        padding:0;
+        margin:0 0 18px;
+        font-size: 18px;
+        text-align:center;
+    }
+    .btn{
+        display:inline-flex;
+        justify-content:center;
+        align-items: center;
+        width:100%;
+        padding:12px 16px;
+        border-radius: 12px;
+        text-decoration: none;
+        cursor:pointer;
+        font-size:18px;
+        border:2px solid transparent;
+        margin-top:auto;
+    }
+    .btn.outline{
+        color:#0d6efd;
+        background:#ffffff;
+        border-color: #0d6efd;
+    }
+    .btn.outline:hover{
+        background:#eff6ff;
+    }
+    .btn.primary{
+        color:#ffffff;
+        background: #0d6efd;
+        border-color:#0d6efd;
+    }
+    .btn.primary:hover{
+        background: #0b5ed7;
+    }
+    .card.featured .card-header{
+        background: #0d6efd;
+        color:#ffffff;
+        border-bottom-color: transparent;
+    }
+    .h2-title{
+        text-align: center;
+    }
+   
+    .table-responsive{ overflow-x:auto; }
+
+    .table-center{
+    width: min(900px, 100%);   
+    margin: 0 auto;            
+    border-collapse: collapse;
+    table-layout: fixed;       
+    }   
+
+
+    .table-center th,.table-center td{
+        padding: 16px 12px;
+        border-top: 1px solid #e5e7eb;
+    }
+    
+    .table-center thead th:first-child{
+        text-align: left; width:34%;
+    }
+    .table-center thead th:not(:first-child){
+        text-align: center;
+    }
+
+    .table-center tbody th{
+        text-align: left; font-weight: 700;
+    }
+    .table-center td{text-align: center;
+    }
+
+
+    .text-start{text-align: left;
+    }
+    .bi{
+    width:24px; height:24px;
+    display:inline-block; vertical-align:middle;
+    fill: currentColor;
+    }
+
+    
+
+
 
     /* ===== 좁은 화면에서는 세로로 쌓기 ===== */
   @media (max-width: 700px){
@@ -104,6 +240,11 @@
         margin:0 auto;
 
     }
+    .col{
+        width:100%;
+        padding:0;
+        margin-bottom:12px;
+    }
   }
 </style>
 </head>
@@ -133,12 +274,193 @@
         </p>
         
     </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="my-0 fw-normal">Free</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="price"><span class="amount">$0</span>
+                        <small>/mo</small>
+                    </h1>
+                    <ul class="features">
+                        <li>10 users included</li>
+                        <li>2 GB of storage</li>
+                        <li>Email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button class="btn outline">Sign up for free</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card">
+                <div class="card-header py-3">
+                    <h4>Pro</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="price"><span class="amount">$15</span>
+                        <small>/mo</small>
+                    </h1>
+                    <ul class="features">
+                        <li>20 users included</li>
+                        <li>10 GB of storage</li>
+                        <li>Priority email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button class="btn primary">Get started</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card featured">
+                <div class="card-header">
+                    <h4>Enterprise</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="price"><span class="amount">$29</span>
+                        <small>/mo </small>
+                    </h1>
+                    <ul class="features">
+                        <li>30 users included</li>
+                        <li>15 GB of storage</li>
+                        <li>Phone and email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button class="btn primary">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 class="h2-title">Compare plans</h2>
+    <div class="table-responsive">
+        <table class="table-center">
+            <thead>
+                <tr>
+                    <th style="width:34%;"></th>
+                    <th style="width:22%;">Free</th>
+                    <th style="width:22%;">Pro</th>
+                    <th style="width:22%;">Enterprise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="text-start">Public</th>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-start">Private</th>
+                    <td></td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th scope="row" class="text-start">Permissions</th>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-start">Sharing</th>
+                    <td></td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-start">Unlimited members</th>
+                    <td></td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="text-start">Extra security</th>
+                    <td></td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                    <td>
+                        <svg class="bi" width="24" height="24" role="img" aria-label="included">
+                            <use xlink:href="#check"></use>
+                        </svg>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
        
     </div>
     
    
  
 </div>
+
+<!-- SVG sprite: check 아이콘 정의 -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="check" viewBox="0 0 16 16">
+    <path fill="currentColor"
+      d="M13.78 3.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 8.28a.75.75 0 1 1 1.06-1.06l2.19 2.19 6.31-6.31a.75.75 0 0 1 1.06 0z"/>
+  </symbol>
+</svg>
+
     
 </body>
 </html>
